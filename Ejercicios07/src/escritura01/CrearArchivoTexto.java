@@ -1,6 +1,7 @@
 package escritura01;
 
 // Uso de la clase Formatter para escribir datos en un archivo de texto.
+import java.io.FileNotFoundException;
 import java.util.Formatter;
 
 public class CrearArchivoTexto {
@@ -12,7 +13,7 @@ public class CrearArchivoTexto {
             salida.format("%s\n", valor);
             salida.close();
 
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
             System.err.println("Error al crear el archivo.");
             System.exit(1);
 
